@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvvl6i3jqvboy"]
+
+[ext_resource type="Script" uid="uid://rnukt3jfo5kn" path="res://scripts/game_manager.gd" id="1_glms7"]
+[ext_resource type="Texture2D" uid="uid://7co2edqej14q" path="res://assets/Background.png" id="1_hwd4i"]
+
+[node name="GameManager" type="Node2D"]
+script = ExtResource("1_glms7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(360, 640)
+texture = ExtResource("1_hwd4i")
