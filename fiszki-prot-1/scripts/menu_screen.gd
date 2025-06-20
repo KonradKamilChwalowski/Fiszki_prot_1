@@ -5,8 +5,8 @@ extends Node2D
 func _on_start_button_pressed() -> void:
 	game_manager.change_screen("language_choice_screen")
 
-func _on_stats_button_pressed() -> void:
-	game_manager.change_screen("stats_screen")
+func _on_library_button_pressed() -> void:
+	game_manager.change_screen("library_screen")
 	
 func _on_options_button_pressed() -> void:
 	game_manager.change_screen("options_screen")

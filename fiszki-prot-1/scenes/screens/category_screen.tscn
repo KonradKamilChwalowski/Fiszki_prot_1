@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://6ov3eqfcoai6"]
+[gd_scene load_steps=5 format=3 uid="uid://dra32qqabllu0"]
 
-[ext_resource type="Script" uid="uid://pafgqnou6h0" path="res://scripts/language_choice_screen.gd" id="1_11y14"]
+[ext_resource type="Script" uid="uid://bwa0ub3x4ldrv" path="res://scripts/category_screen.gd" id="1_8bxr4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qg5yo"]
 bg_color = Color(1, 1, 1, 0.25098)
@@ -9,34 +9,28 @@ expand_margin_top = 10.0
 expand_margin_right = 40.0
 expand_margin_bottom = 10.0
 
+[sub_resource type="ButtonGroup" id="ButtonGroup_8bxr4"]
+resource_name = "CategoryGroup"
+
 [sub_resource type="ButtonGroup" id="ButtonGroup_yggy6"]
 resource_name = "Languages"
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_32ted"]
-resource_name = "Languages"
-
-[sub_resource type="ButtonGroup" id="ButtonGroup_6q250"]
-resource_name = "Languages"
-
-[sub_resource type="ButtonGroup" id="ButtonGroup_an21t"]
-resource_name = "Languages"
-
-[node name="LanguageChoiceScreen" type="Node2D"]
-script = ExtResource("1_11y14")
+[node name="CategoryScreen" type="Node2D"]
+script = ExtResource("1_8bxr4")
 
 [node name="Screen_Name" type="Label" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 279.0
+offset_left = 134.0
 offset_top = 54.0
-offset_right = 429.0
+offset_right = 587.0
 offset_bottom = 123.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
-text = "Wybór Języka"
+text = "Wybór kategorii"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
@@ -56,41 +50,41 @@ grow_horizontal = 2
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Polski" type="Button" parent="ScrollContainer/VBoxContainer"]
+[node name="CiałoCzłowieka" type="Button" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_qg5yo")
 toggle_mode = true
-button_group = SubResource("ButtonGroup_yggy6")
-text = "Polski"
+button_group = SubResource("ButtonGroup_8bxr4")
+text = "Ciało człowieka"
 
-[node name="Angielski" type="Button" parent="ScrollContainer/VBoxContainer"]
+[node name="Zwierzęta" type="Button" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_qg5yo")
 toggle_mode = true
-button_group = SubResource("ButtonGroup_32ted")
-text = "Angielski"
+button_group = SubResource("ButtonGroup_8bxr4")
+text = "Zwierzęta"
 
-[node name="Niemiecki" type="Button" parent="ScrollContainer/VBoxContainer"]
+[node name="Jedzenie" type="Button" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_qg5yo")
 toggle_mode = true
-button_group = SubResource("ButtonGroup_6q250")
-text = "Niemiecki"
+button_group = SubResource("ButtonGroup_8bxr4")
+text = "Jedzenie"
 
-[node name="Ukraiński" type="Button" parent="ScrollContainer/VBoxContainer"]
+[node name="Zawody" type="Button" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_qg5yo")
 toggle_mode = true
-button_group = SubResource("ButtonGroup_an21t")
-text = "Ukraiński"
+button_group = SubResource("ButtonGroup_8bxr4")
+text = "Zawody"
 
 [node name="BackButton" type="Button" parent="."]
 offset_left = 79.0
