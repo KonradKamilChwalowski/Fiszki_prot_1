@@ -41,14 +41,22 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 232.0
-offset_top = 699.0
-offset_right = 472.0
-offset_bottom = 1035.0
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(400, 130)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 134.0
+offset_top = 651.0
+offset_right = 534.0
+offset_bottom = 801.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Polski" type="Button" parent="VBoxContainer"]
+[node name="Polski" type="Button" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
@@ -57,7 +65,7 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_yggy6")
 text = "Polski"
 
-[node name="Angielski" type="Button" parent="VBoxContainer"]
+[node name="Angielski" type="Button" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
@@ -66,7 +74,7 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_32ted")
 text = "Angielski"
 
-[node name="Niemiecki" type="Button" parent="VBoxContainer"]
+[node name="Niemiecki" type="Button" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
@@ -75,7 +83,7 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_6q250")
 text = "Niemiecki"
 
-[node name="Ukraiński" type="Button" parent="VBoxContainer"]
+[node name="Ukraiński" type="Button" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
